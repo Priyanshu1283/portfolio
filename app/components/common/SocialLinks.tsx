@@ -4,17 +4,17 @@ import { Mail } from "lucide-react";
 const socials = [
   {
     name: "GitHub",
-    href: "https://github.com/yourusername",
+    href: "https://github.com/Priyanshu-69",
     icon: FaGithub,
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/yourusername",
+    href: "https://www.linkedin.com/in/priyanshu-69",
     icon: FaLinkedinIn,
   },
   {
     name: "Email",
-    href: "mailto:your-email@gmail.com",
+    href: "priyanshukumarbgs066@gmail.com",
     icon: Mail,
   },
 ];

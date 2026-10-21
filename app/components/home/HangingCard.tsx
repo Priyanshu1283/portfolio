@@ -738,7 +738,7 @@ export default function HangingCard({
               }}
             >
               <Image
-                src="/profile.jpg"
+                src="/images/DP/DP1.jpeg"
                 alt="Priyanshu Kumar"
                 fill
                 priority
