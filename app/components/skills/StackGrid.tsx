@@ -44,8 +44,8 @@ export default function StackGrid() {
         return <SiJavascript className="size-6 text-[#f7df1e]" />;
       case "Java":
         return <FaJava className="size-6 text-[#e76f00]" />;
-      case "C++":
-        return <SiCplusplus className="size-6 text-[#00599c]" />;
+      // case "C++":
+      //   return <SiCplusplus className="size-6 text-[#00599c]" />;
       case "React":
         return <SiReact className="size-6 text-[#61dafb]" />;
       case "Next.js":
@@ -54,8 +54,8 @@ export default function StackGrid() {
         return <SiTailwindcss className="size-6 text-[#06b6d4]" />;
       case "Framer Motion":
         return <SiFramer className="size-6 text-[#f01a7d]" />;
-      case "Three.js":
-        return <SiThreedotjs className="size-6 text-black dark:text-white" />;
+      // case "Three.js":
+      //   return <SiThreedotjs className="size-6 text-black dark:text-white" />;
       case "Redux Toolkit":
         return <SiRedux className="size-6 text-[#764abc]" />;
       case "Node.js":

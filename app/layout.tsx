@@ -5,28 +5,23 @@ import "./globals.css";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap"
+  display: "swap",
 });
 
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0f0f0f" }
+    { media: "(prefers-color-scheme: dark)", color: "#0f0f0f" },
   ],
   width: "device-width",
-  initialScale: 1
+  initialScale: 1,
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://pranshu.indevs.in"),
   title: {
     default: "Priyanshu Kumar — Full-Stack Software Engineer & MERN Architect",
-    template: "%s | Priyanshu Kumar"
-  },
-  icons: {
-    icon: "/icons/logo.jpeg",
-    shortcut: "/icons/logo.jpeg",
-    apple: "/icons/logo.jpeg"
+    template: "%s | Priyanshu Kumar",
   },
   description:
     "Portfolio of Priyanshu Kumar (Pranshu) — Full-Stack Software Engineer specializing in Next.js, React, Node.js, Express, MongoDB, and high-performance web systems. 700+ DSA problems solved.",
@@ -35,34 +30,59 @@ export const metadata: Metadata = {
     "Pranshu",
     "Priyanshu developer",
     "Pranshu developer",
+    "Priyanshu1283",
     "Full-Stack Developer",
     "MERN Stack Developer",
     "Next.js Developer India",
     "Software Engineer Portfolio",
     "React Engineer",
-    "Bhopal Developer"
+    "TypeScript Architect",
+    "Node.js Backend Developer",
+    "DSA LeetCode Solver",
+    "LNCT Bhopal Computer Science",
+    "Salesforce Certified Agentforce",
+    "Web Developer Kolkata",
   ],
   authors: [{ name: "Priyanshu Kumar", url: "https://pranshu.indevs.in" }],
   creator: "Priyanshu Kumar",
   publisher: "Priyanshu Kumar",
+  category: "Technology",
+  classification: "Software Engineering Portfolio",
   alternates: {
-    canonical: "https://pranshu.indevs.in"
+    canonical: "https://pranshu.indevs.in",
+  },
+  icons: {
+    icon: [
+      { url: "/icons/logo.jpeg", sizes: "32x32", type: "image/jpeg" },
+      { url: "/icons/logo.jpeg", sizes: "192x192", type: "image/jpeg" },
+    ],
+    shortcut: "/icons/logo.jpeg",
+    apple: "/icons/logo.jpeg",
   },
   openGraph: {
-    title: "Priyanshu Kumar — Full-Stack Software Engineer",
+    title: "Priyanshu Kumar — Full-Stack Software Engineer & MERN Architect",
     description:
-      "Crafting high-performance web applications, scalable backends, and modern interfaces. Explore projects, tech stack, and achievements.",
+      "Crafting high-performance web applications, scalable backends, and responsive user experiences. 700+ DSA solved. Open for software engineering roles.",
     url: "https://pranshu.indevs.in",
-    siteName: "Priyanshu Kumar Portfolio",
+    siteName: "Priyanshu Kumar (Pranshu) Portfolio",
     locale: "en_IN",
-    type: "website"
+    type: "website",
+    images: [
+      {
+        url: "/images/DP/DP1.jpeg",
+        width: 800,
+        height: 800,
+        alt: "Priyanshu Kumar — Full-Stack Software Engineer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Priyanshu Kumar — Full-Stack Software Engineer",
     description:
-      "Full-Stack Engineer building modern web applications with Next.js, React, Node.js, and TypeScript.",
-    creator: "@ShivamS89004941"
+      "Full-Stack Engineer building modern web apps with Next.js, React, Node.js, and TypeScript. 700+ DSA problems solved.",
+    creator: "@ShivamS89004941",
+    images: ["/images/DP/DP1.jpeg"],
   },
   robots: {
     index: true,
@@ -72,46 +92,70 @@ export const metadata: Metadata = {
       follow: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
-      "max-snippet": -1
-    }
-  }
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Priyanshu Kumar",
-    alternateName: "Pranshu",
-    jobTitle: "Full-Stack Software Engineer",
-    url: "https://pranshu.indevs.in",
-    sameAs: [
-      "https://github.com/Priyanshu1283",
-      "https://www.linkedin.com/in/priyanshu-kumar-03310a253/",
-      "https://leetcode.com/u/Pranshu_066/",
-      "https://x.com/ShivamS89004941"
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://pranshu.indevs.in/#person",
+        name: "Priyanshu Kumar",
+        alternateName: "Pranshu",
+        jobTitle: "Full-Stack Software Engineer",
+        url: "https://pranshu.indevs.in",
+        image: "https://pranshu.indevs.in/images/DP/DP1.jpeg",
+        sameAs: [
+          "https://github.com/Priyanshu1283",
+          "https://www.linkedin.com/in/priyanshu-kumar-03310a253/",
+          "https://leetcode.com/u/Pranshu_066/",
+          "https://x.com/ShivamS89004941",
+        ],
+        alumniOf: {
+          "@type": "EducationalOrganization",
+          name: "Lakshmi Narain College of Technology (LNCT), Bhopal",
+        },
+        knowsAbout: [
+          "Full-Stack Development",
+          "Next.js",
+          "React.js",
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "TypeScript",
+          "Data Structures and Algorithms",
+          "Cloudflare Workers",
+          "Salesforce Agentforce",
+          "Tailwind CSS",
+        ],
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Kolkata",
+          addressRegion: "West Bengal",
+          addressCountry: "India",
+        },
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://pranshu.indevs.in/#website",
+        url: "https://pranshu.indevs.in",
+        name: "Priyanshu Kumar — Portfolio",
+        description:
+          "Portfolio of Priyanshu Kumar — Full-Stack Software Engineer specializing in Next.js, React, Node.js, Express, and MongoDB.",
+        publisher: {
+          "@id": "https://pranshu.indevs.in/#person",
+        },
+        inLanguage: "en-IN",
+      },
     ],
-    knowsAbout: [
-      "Full-Stack Development",
-      "Next.js",
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "TypeScript",
-      "Data Structures and Algorithms",
-      "Tailwind CSS"
-    ],
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Bhopal",
-      addressRegion: "Madhya Pradesh",
-      addressCountry: "India"
-    }
   };
 
   return (
